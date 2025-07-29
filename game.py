@@ -2,16 +2,8 @@
 # This is the template file for the collaborative Git tutorial.
 
 def get_player_guess():
-    while True:
-        try:
-            guess = int(input("Guess a number: "))
-            if 1 <= guess <= 100:
-                return guess
-            else:
-                print("Please enter a number between 1 and 100.")
-        except ValueError:
-            print("Invalid input. Please enter a valid number.")
     pass
+   
 
 def check_guess(secret_number, player_guess):
     """
@@ -21,7 +13,14 @@ def check_guess(secret_number, player_guess):
     3. If the guess is too high, return the string "high".
     4. If the guess is too low, return the string "low".
     """
-    
+    if player_guess == secret_number:
+        return "correct"
+    elif player_guess > secret_number:
+        return "high"
+    else:
+        return "low"
+
+
     # Student 2: Add your code here
     pass
 
